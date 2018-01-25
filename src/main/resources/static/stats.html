@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+  <title>Expense Tracker App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="scripts/lib/jquery.min.js"></script>
+  <script src="scripts/lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <script src="scripts/stats.js"></script>
+  <script src="scripts/fusioncharts/fusioncharts.js"></script>
+  <script src="scripts/fusioncharts/fusioncharts.charts.js"></script>
+  <script src="scripts/fusioncharts/fusioncharts.theme.fint.js"></script>
+  </head>
+ <body>
+ <nav class="navbar navbar-default" id="navigationMenu">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ExpenseTracker</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li class="activeMenu"><a href="stats.html">Analysis</a></li>
+      <li><a href="expenses.html">Expenses</a></li>
+       <li><a href="#" id="logoutBtn">Log out</a></li>
+    </ul>
+  </div>
+</nav>
+ <div class="container topContainer">
+ <h3>Statistics</h3>
+ 
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#categoryTab">Category</a></li>
+    <li><a data-toggle="tab" href="#monthlyTab">Monthly</a></li>
+    <li><a data-toggle="tab" href="#yearlyTab">Yearly</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="categoryTab" class="tab-pane fade in active">
+    	<div class="row">
+      <div class="col-md-3">
+      	  <div class="form-group input-group" style="margin-top : 10px">
+      	  	   <span class="input-group-addon" aria-hidden="true">
+      	  	  	<span class="glyphicon glyphicon-calendar"></span>
+      	  	   </span>
+               <input class="form-control" type="text" placeholder="Pick a month and year" id="datePickerForCategory" />
+                
+           </div>
+      </div>
+    </div>
+      	<div id="categoryChartContainer"></div>
+      
+      
+    </div>
+    <div id="monthlyTab" class="tab-pane fade">
+    <div class="row">
+      <div class="col-md-3">
+      	  <div class="form-group input-group" style="margin-top : 10px">
+      	  	<span class="input-group-addon" aria-hidden="true">
+      	  	  	<span class="glyphicon glyphicon-calendar"></span>
+      	  	   </span>
+               <input class="form-control" type="text" placeholder="Pick a month and year" id="datePickerForMonth" />
+                
+           </div>
+      </div>
+    </div>
+      	<div id="chartContainerForLine" style="height: 300px; width: 100%; margin-top : 3px"></div>
+    </div>
+    <div id="yearlyTab" class="tab-pane fade">
+    	 <div class="row">
+      <div class="col-md-3">
+      	  <div class="form-group input-group" style="margin-top : 10px">
+      	  	<span class="input-group-addon" aria-hidden="true">
+      	  	  	<span class="glyphicon glyphicon-calendar"></span>
+      	  	</span>
+               <input class="form-control" type="text" placeholder="Pick a year" id="datePickerForYear" />
+                
+           </div>
+      </div>
+    </div>
+      	<div id="yearlychartContainer"></div>
+		
+      </div>
+   
+  </div>
+ 
+ </div>
+ </body>
+ </html>

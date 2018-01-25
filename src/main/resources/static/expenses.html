@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Expense Tracker App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="scripts/lib/jquery.min.js"></script>
+  <script src="scripts/lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <script src="scripts/lib/jquery.dataTables.min.js"></script>
+  <script src="scripts/lib/dataTables.bootstrap.min.js"></script>
+  <script src="scripts/expenses.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default" id="navigationMenu">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ExpenseTracker</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="stats.html">Analysis</a></li>
+      <li class="activeMenu"><a href="#">Expenses</a></li>
+       <li><a href="#" id="logoutBtn">Log out</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container topContainer">
+	<div class="row">
+		 <div class="col-md-3">
+		  <h3>Expenses</h3>
+           <div class="form-group input-group" style="margin-top : 10px">
+      	  	<span class="input-group-addon" aria-hidden="true">
+      	  	  	<span class="glyphicon glyphicon-calendar"></span>
+      	  	   </span>
+               <input class="form-control" type="text" placeholder="Pick a month and year" id="datePickerForMonth" />
+                
+           </div>
+      </div>
+	</div>
+    <div class="row">
+        <div class="col-md-9">
+                <table class="table table-hover" id="expenseTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                       
+                    </table>
+              
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>

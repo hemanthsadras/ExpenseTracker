@@ -1,0 +1,25 @@
+.topContainer {
+	padding-left: 30px;
+	margin-left: 0px;
+}
+
+#navigationMenu {
+	background-color: #212121;
+}
+
+#navigationMenu a {
+	color: #fafafa;
+}
+
+.activeMenu {
+	background-color: #01579B;
+}
+
+table .inlineBtn {
+	display: none;
+	margin-left: 7px;
+}
+
+table tr:hover .inlineBtn {
+	display: inline;
+}
